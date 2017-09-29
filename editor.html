@@ -1,0 +1,769 @@
+<!Doctype html>
+<html>
+<head>
+
+  <title> Styler </title>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="file:///C:/Users/PureTech/Desktop/All/jquery/jquery-ui.css" type="text/css" media="all" /> 
+  
+
+
+  <style>
+  body{
+    font-family: open sans;
+  }
+  .border-settings{
+    width: 170px;
+    height: 402px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 3px 3px #ddd;
+}
+  
+  .shorteninput{
+    background: none;
+    border: none;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 11px;
+  }
+  
+  .valuechangerR{
+    display: block;
+    height: 25px;
+    position: relative;
+    top: -25px;
+  }
+  .valuechanger{
+       margin-top: 110px;
+    display: block;
+        margin-left: 25px;
+  }
+.test{
+ display:none;
+  width:310px;
+  height:300px;
+  border-width:1px;
+  opacity:1;
+  border: 1px solid grey;
+  
+  background:white;
+  border-radius: 5px;
+  z-index:1;
+}
+.hdl{
+  text-align: center;
+  margin-top: 0px;
+  border-bottom: 1px solid grey;
+}
+.a1{
+
+  margin-left: 1px;
+   float: left;
+}
+.a2{
+  
+   float: left;
+   text-align: center;
+   width: 145px;
+
+}
+
+.ttt{
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  margin-top:200px;
+}
+
+/*.adder{width: 35px;height: 35px; border: 2px solid black; float: left; margin-left:35px;  position: relative; left: 15px; top: -4px; background-color:#e4e4e4;}
+.adder2{width: 35px; height: 35px; border: 2px solid black; float: left; margin-top:35px; position: relative;left: 16px;top: 7px; background-color:#e4e4e4;}
+.adder3{width: 35px; height: 35px; border: 2px solid black; float: left;  position: relative;left: 9px;top: -32px; background-color:#e4e4e4;}
+.adder4{width: 35px; height: 35px; border: 2px solid black; float: left; margin-top:40px;     position: relative; left: 12px; top: -23px; background-color:#e4e4e4;}
+.model{ height:100px; width: 80px; border: 2px solid black; position: relative; left: 28px; top: 11px; z-index:-1;}*/
+.solid{ border: 1px solid grey; height: 35px; width: 35px; float: left; margin: 5px;}
+.dotted{border: 1px dotted grey;height: 35px; width: 35px;float: left; margin: 5px;}
+.dashed{border: 1px dashed grey;height: 35px; width: 35px;float: left;margin: 5px;}
+.double{border: 1px double grey;height: 35px; width: 35px;float: left; margin: 5px;}
+.remove{border: 0px; height: 30px; width: 30px;float: left; margin: 5px;}
+.mixed{height: 30px; width: 30px;float: left; border-style: dotted dashed solid double; margin: 5px;}
+
+
+ 
+    .active{
+      background-color: #007fff !important;
+      color: white;
+    }
+    .plus{
+      background: blue;
+      height: 20px;
+      width: 20px;
+      margin: 2px;
+    }
+    .minus{
+      background: red;
+      height: 20px;
+      width: 20px;
+      margin: 2px;
+    }
+    .round{
+      background: purple;
+      height: 20px;
+      width: 20px;
+      margin: 2px;
+    }
+
+
+
+.borderEditors{
+  margin-top: 5px;
+}
+.borderVal{
+  width: 30px;
+      margin-left: -4px;
+}
+.ff{
+  background: #2c3e50;
+    color: white;
+    border: 1px solid white;
+}
+
+.topL{ height: 25px; width: 40px; background: #ddd;}
+.topR{height: 25px; width: 40px; background: #ddd; }
+.bottomL{height: 25px; width: 40px; background: #ddd;     margin-top: 30px;}
+.bottomR{height: 25px; width: 40px; background: #ddd;     margin-top: 30px;}
+
+.top{ float: left; height: 125px; width: 50px;}
+.bottom{ float: left; height: 125px; width: 50px;}
+.ttte{ float: left; height: 30px; width: 30px; background: #007fff; margin: 30px 5px 0px -6px;}
+
+
+.l{ 
+  float:left;
+   height: 120px; 
+   width: 154px; 
+    display: block;
+    }
+
+.borderValR{
+  width: 30px;
+
+}
+
+.activeR{
+      background: #007fff;
+      color: white;
+    }
+
+    .xx{
+      height: 25px;
+      width: 40px;
+      background: #ddd;
+      float: left;
+
+    }
+    .i{margin-top: 25px;}
+    .iii{margin-top: 25px;}
+    .iv{margin-top: 50px; margin-left: -80px;}
+    .boxes{
+      display: block;
+    }
+    .border-width{
+      display: block;
+    }
+    .border-radius{
+      display: block;
+    }
+
+    .borderValR{
+       margin-left: 46px;
+    }
+    .subtructR{
+          position: relative;
+    top: 125px;
+        left: -103px;
+    }
+    .border-text{
+          margin-left: -30px;
+          text-align: center;
+          background: #2c3e50;
+    color: white;
+    padding: 5px;
+    }
+    .bw-text{
+          background: #007fff;
+    color: white;
+    margin-left: -30px;
+    text-align: center;
+    margin-top: -20px;
+    }
+    .br-text{
+          background: #007fff;
+    color: white;
+    margin-left: -30px;
+    text-align: center;
+    }
+    .subruct{
+          margin-left: 25px;
+    }
+    .add{
+          margin-left: -4px;
+    }
+    .addR{
+      margin-left: -4px;
+    }
+    .bt{
+      height: 20px;
+      width:20px;
+    }
+    .inval{
+      height:20px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+
+ <script src="file:///C:/Users/PureTech/Desktop/jquery/jquery-ui-1.12.0.js"></script>
+
+ <div class="border-settings">
+
+  <h3 class="border-text">Advanced</h3>
+<div class="border-width">
+  <h4 class="bw-text"> Border Width</h4>
+<div class="boxes">
+  <div class="i adder3 xx"></div>
+  <div class="ii adder xx"></div>
+  <div class="iii adder2 xx"></div>
+  <div class="iv adder4 xx"></div>
+</div>
+
+<div class="valuechanger">
+  <input type="Button" class="ff bt subtruct" value="-" />
+   
+    <input class="ff inval borderVal" value="0"/>
+    
+    <input type="Button" class="ff bt add" value="+" />
+ </div>
+</div>
+
+<div class="border-radius">
+  <h4 class="br-text"> Border Radius</h4>
+<div class="l">
+<div class="top">
+  <div class="topL"></div>
+  <div class="bottomL"></div>
+</div>
+<div class="ttte"></div>
+<div class="bottom">
+  <div class="topR"></div>
+    <div class="bottomR"></div>
+</div>
+
+  <div class="valuechangerR">
+  <input type="Button" class="ff bt subtructR"value="-" />
+   
+    <input class="ff inval borderValR" value="0"/>
+    
+    <input type="Button" class="ff bt addR" value="+" />
+ </div>
+
+</div>
+</div>
+</div>
+
+<div class="ttt">
+
+</div>
+
+
+<!--
+<div class="boxes">
+  <div class="i adder3 xx"></div>
+  <div class="ii adder xx"></div>
+  <div class="iii adder2 xx"></div>
+  <div class="iv adder4 xx"></div>
+</div>
+
+<div class="l">
+<div class="top">
+  <div class="topL"></div>
+  <div class="bottomL"></div>
+</div>
+<div class="ttte"></div>
+<div class="bottom">
+  <div class="topR"></div>
+    <div class="bottomR"></div>
+</div>
+<div>-->
+	<script>
+$(function(){
+
+$(".ttt").draggable();
+  /* =============================================================================
+  ------------------------  border width ========================================
+  =============================================================================*/
+ 
+
+
+ /*===============================================
+ ---for border width:- trigger clicks for faster value change
+ ===============================================*/
+$(".add").on("mousedown", function(){
+  changingValP = setInterval(function(){
+  $(".add").trigger("click");
+}, 150);
+});
+$(".add").on("mouseup", function StopFunction() {
+    clearInterval(changingValP);
+});
+
+// trigger minus clicks 
+$(".subtruct").on("mousedown", function(){
+  changingValM = setInterval(function(){
+  $(".subtruct").trigger("click");
+}, 180);
+});
+$(".subtruct").on("mouseup", function StopFunction() {
+    clearInterval(changingValM);
+});
+
+
+/* ================== the first value the user sees =============================== */
+$('.ttt').click(function(){
+var topV = $(".ttt").css("border-top-width");
+   $(".adder").append('<div class="topVal shorteninput" >'+topV+'</div>');
+
+   var rightV = $(".ttt").css("border-right-width");
+   $(".adder2").append('<div class="rightVal shorteninput">'+rightV+'</div>');
+
+   var bottomV = $(".ttt").css("border-bottom-width");
+   $(".adder4").append('<div class="bottomVal shorteninput">'+bottomV+'</div>');
+
+   var leftV = $(".ttt").css("border-left-width");
+   $(".adder3").append('<div class="leftVal shorteninput">'+leftV+'</div>');
+});
+
+/* =================================================================
+--------------- change the value of input per click ================
+===================================================================*/
+$(".add").click(function(){
+  
+    var counter = $('.borderVal').val();
+    counter++ ;
+   $('.borderVal').val(counter);
+ /*==== top ======================================================================*/
+   if( $(".adder").hasClass("active")){
+   $(".ttt").css({borderTopWidth: counter});
+
+   if($(".adder").children(".topVal")){
+
+      $(".topVal").remove();
+     var topV = $(".ttt").css("border-top-width");
+   $(".adder").append('<div class="topVal shorteninput" >'+topV+'</div>');
+   }
+ }
+/*==== right ===================================================================*/
+   if( $(".adder2").hasClass("active")){
+   $(".ttt").css({borderRightWidth: counter});
+   if($(".adder2").children(".rightVal")){
+
+      $(".rightVal").remove();
+     var rightV = $(".ttt").css("border-right-width");
+   $(".adder2").append('<div class="rightVal shorteninput" >'+rightV+'</div>');
+   }
+ }
+ /*=== bottom =======================================================================*/
+
+ if( $(".adder4").hasClass("active")){
+   $(".ttt").css({borderBottomWidth: counter});
+
+   if($(".adder4").children(".bottomVal")){
+
+      $(".bottomVal").remove();
+     var bottomV = $(".ttt").css("border-bottom-width");
+   $(".adder4").append('<div class="bottomVal shorteninput" >'+bottomV+'</div>');
+   }
+ }
+
+  /*======= left ===================================================================*/
+
+ if( $(".adder3").hasClass("active")){
+   $(".ttt").css({borderLeftWidth: counter});
+
+   if($(".adder3").children(".leftVal")){
+
+      $(".leftVal").remove();
+     var leftV = $(".ttt").css("border-left-width");
+   $(".adder3").append('<div class="leftVal shorteninput" >'+leftV+'</div>');
+   }
+ }
+
+});
+
+$(".subtruct").on("click", function(){
+
+    var counterM = $('.borderVal').val();
+    counterM--;
+   $('.borderVal').val(counterM);
+ /*====== top  ====================================================================*/
+   if( $(".adder").hasClass("active")){
+   $(".ttt").css({borderTopWidth: counterM});
+
+if($(".adder").children(".topVal")){
+
+      $(".topVal").remove();
+     var topV = $(".ttt").css("border-top-width");
+   $(".adder").append('<div class="topVal shorteninput" >'+topV+'</div>');
+   }
+
+ }
+
+ /*===== right =====================================================================*/
+if( $(".adder2").hasClass("active")){
+  $(".ttt").css({borderRightWidth: counterM});
+
+  if($(".adder2").children(".rightVal")){
+
+      $(".rightVal").remove();
+     var rightV = $(".ttt").css("border-right-width");
+   $(".adder2").append('<div class="rightVal shorteninput" >'+rightV+'</div>');
+   }
+ }
+ /*===== bottom =====================================================================*/
+ if( $(".adder4").hasClass("active")){
+   $(".ttt").css({borderBottomWidth: counterM});
+
+   if($(".adder4").children(".bottomVal")){
+
+      $(".bottomVal").remove();
+     var bottomV = $(".ttt").css("border-bottom-width");
+   $(".adder4").append('<div class="bottomVal shorteninput" >'+bottomV+'</div>');
+   }
+ }
+ /*===== left=====================================================================*/
+ if( $(".adder3").hasClass("active")){
+   $(".ttt").css({borderLeftWidth: counterM});
+
+   if($(".adder3").children(".leftVal")){
+
+      $(".leftVal").remove();
+     var leftV = $(".ttt").css("border-left-width");
+   $(".adder3").append('<div class="leftVal shorteninput" >'+leftV+'</div>');
+   }
+ }
+
+
+
+}); 
+
+ // give .acive class to every adder clicked 
+ $(".adder, .adder2, .adder3, .adder4").addClass("adders");
+ $(".adders").click(function(){
+    if(!$(this).hasClass('active'))
+        {
+            $(".adders.active").removeClass("active");
+            $(this).addClass("active");
+                   
+        }
+ });
+
+});
+
+
+$(document).ready(function(){
+  $(".model").resizable();
+   $(".pop").click(function(){
+       $(".test").toggle();
+   });
+});
+$(".adder").click(function(){
+    var getBorderTopWidth = $(".ttt").css("borderTopWidth").replace("px", "");
+    $(".borderVal").val(getBorderTopWidth);
+});
+$(".adder2").click(function(){
+    var getBorderRightWidth = $(".ttt").css("borderRightWidth").replace("px", "");
+    $(".borderVal").val(getBorderRightWidth);
+});
+
+$(".adder3").click(function(){
+    var getBorderLeftWidth = $(".ttt").css("borderLeftWidth").replace("px", "");
+    $(".borderVal").val(getBorderLeftWidth);
+});
+$(".adder4").click(function(){
+     var getBorderBottomWidth = $(".ttt").css("borderBottomWidth").replace("px", "");
+    $(".borderVal").val(getBorderBottomWidth);
+});
+
+
+// border roundness 
+
+/* =====================================================================================
+---------------------------- border radius ==============================================
+=========================================================================================*/
+
+$(function(){
+
+/*===============================================
+ ---for border radius:- trigger clicks for faster value change
+ ===============================================*/
+  $(".addR").on("mousedown", function(){
+  changingValP = setInterval(function(){
+  $(".addR").trigger("click");
+}, 180);
+});
+$(".addR").on("mouseup", function myStopFunction() {
+    clearInterval(changingValP);
+});
+
+// trigger minus clicks 
+$(".subtructR").on("mousedown", function(){
+  changingValM = setInterval(function(){
+  $(".subtructR").trigger("click");
+}, 180);
+});
+$(".subtructR").on("mouseup", function myStopFunction() {
+    clearInterval(changingValM);
+});
+ 
+ /* ================== the first value the user sees =============================== */
+$('.ttt').click(function(){
+var topl = $(".ttt").css("border-top-left-radius");
+   $(".topL").append('<div class="topLVal shorteninput" >'+topl+'</div>');
+
+   var topr = $(".ttt").css("border-top-right-radius");
+   $(".topR").append('<div class="topLValR shorteninput">'+topr+'</div>');
+
+   var bottoml = $(".ttt").css("border-bottom-left-radius");
+   $(".bottomL").append('<div class="bottomLVal shorteninput">'+bottoml+'</div>');
+
+   var bottomr = $(".ttt").css("border-bottom-right-radius");
+   $(".bottomR").append('<div class="bottomRVal shorteninput">'+bottomr+'</div>');
+});
+$(".addR").click(function(){
+  
+    var counterR = $('.borderValR').val();
+    counterR++ ;
+   $('.borderValR').val(counterR);
+/*====== top-left  ====================================================================*/
+   if( $(".topL").hasClass("activeR")){
+   $(".ttt").css({borderTopLeftRadius: counterR});
+   $(".ttte").css({borderTopLeftRadius: counterR});
+
+   if($(".topL").children(".topLVal")){
+
+      $(".topLVal").remove();
+      var topl = $(".ttt").css("border-top-left-radius");
+   $(".topL").append('<div class="topLVal shorteninput" >'+topl+'</div>');
+   }
+
+  
+   
+ }
+/*====== top-right  ====================================================================*/
+   if( $(".topR").hasClass("activeR")){
+   $(".ttt").css({borderTopRightRadius: counterR});
+   $(".ttte").css({borderTopRightRadius: counterR});
+
+   if($(".topR").children(".topLValR")){
+
+      $(".topLValR").remove();
+      var topr = $(".ttt").css("border-top-right-radius");
+   $(".topR").append('<div class="topLValR shorteninput">'+topr+'</div>');
+   }
+
+
+ }
+/*====== bottom-right  ====================================================================*/
+ if( $(".bottomR").hasClass("activeR")){
+   $(".ttt").css({borderBottomRightRadius: counterR});
+   $(".ttte").css({borderBottomRightRadius: counterR});
+   
+   if($(".bottomR").children(".bottomRVal")){
+
+      $(".bottomRVal").remove();
+      var bottomr = $(".ttt").css("border-bottom-right-radius");
+   $(".bottomR").append('<div class="bottomRVal shorteninput" >'+bottomr+'</div>');
+
+ }
+}
+
+/*====== bottom-left  ====================================================================*/
+ if( $(".bottomL").hasClass("activeR")){
+   $(".ttt").css({borderBottomLeftRadius: counterR});
+   $(".ttte").css({borderBottomLeftRadius: counterR});
+
+   if($(".bottomL").children(".bottomLVal")){
+
+      $(".bottomLVal").remove();
+      var bottoml = $(".ttt").css("border-bottom-left-radius");
+   $(".bottomL").append('<div class="bottomLVal shorteninput" >'+bottoml+'</div>');
+
+ }
+
+ }
+});
+
+/*===========================================================================================
+----------------------------------- subract of border radius ==================================
+==============================================================================================*/
+
+$(".subtructR").on("click", function(){
+
+    var counterMR = $('.borderValR').val();
+    counterMR--;
+   $('.borderValR').val(counterMR);
+
+   /*====== top-left  ====================================================================*/
+
+   if( $(".topL").hasClass("activeR")){
+   $(".ttt").css({borderTopLeftRadius: counterMR});
+   $(".ttte").css({borderTopLeftRadius: counterMR});
+
+   if($(".topL").children(".topLVal")){
+
+      $(".topLVal").remove();
+      var topl = $(".ttt").css("border-top-left-radius");
+   $(".topL").append('<div class="topLVal shorteninput" >'+topl+'</div>');
+   }
+
+ }
+
+/*====== top-right  ====================================================================*/
+if( $(".topR").hasClass("activeR")){
+  $(".ttt").css({borderTopRightRadius: counterMR});
+  $(".ttte").css({borderTopRightRadius: counterMR});
+
+   if($(".topR").children(".topLValR")){
+
+      $(".topLValR").remove();
+      var topr = $(".ttt").css("border-top-right-radius");
+   $(".topR").append('<div class="topLValR shorteninput">'+topr+'</div>');
+   }   
+
+
+
+ }
+/*====== bottom-left  ====================================================================*/
+ if( $(".bottomL").hasClass("activeR")){
+   $(".ttt").css({borderBottomLeftRadius: counterMR});
+   $(".ttte").css({borderBottomLeftRadius: counterMR});
+
+   if($(".bottomL").children(".bottomLVal")){
+
+      $(".bottomLVal").remove();
+     var bottoml = $(".ttt").css("border-bottom-left-radius");
+   $(".bottomL").append('<div class="bottomLVal shorteninput">'+bottoml+'</div>');
+   }   
+
+ }
+
+/*====== bottom-right  ====================================================================*/
+ if( $(".bottomR").hasClass("activeR")){
+   $(".ttt").css({borderBottomRightRadius: counterMR});
+   $(".ttte").css({borderBottomRightRadius: counterMR});
+
+   if($(".bottomR").children(".bottomRVal")){
+
+      $(".bottomRVal").remove();
+     var bottomr = $(".ttt").css("border-bottom-right-radius");
+   $(".bottomR").append('<div class="bottomRVal shorteninput">'+bottomr+'</div>');
+   }   
+
+ }
+
+
+
+}); 
+
+ /*==================================================================================
+ -------- give .acive class to every adder(for changing the border width) clicked=====
+ ===================================================================================*/ 
+ $(".topR, .topL, .bottomR, .bottomL").addClass("rounders");
+ $(".rounders").click(function(){
+    if(!$(this).hasClass('activeR'))
+        {
+            $(".rounders.activeR").removeClass("activeR");
+            $(this).addClass("activeR");
+                   
+        }
+ });
+
+
+
+
+});
+
+
+/*$(document).ready(function(){
+  $(".model").resizable();
+   $(".pop").click(function(){
+       $(".test").toggle();
+   });
+});
+*/
+$(".topL").click(function(){
+    var getBorderTopLeftRadius = $(".ttt").css("borderTopLeftRadius").replace("px", "");
+    $(".borderValR").val(getBorderTopLeftRadius);
+});
+$(".topR").click(function(){
+    var getBorderTopRightRadius = $(".ttt").css("borderTopRightRadius").replace("px", "");
+    $(".borderValR").val(getBorderTopRightRadius);
+});
+
+$(".bottomL").click(function(){
+    var getBorderBottomLeftRadius = $(".ttt").css("borderBottomLeftRadius").replace("px", "");
+    $(".borderValR").val(getBorderBottomLeftRadius);
+});
+$(".bottomR").click(function(){
+     var getBorderBottomRightRadius = $(".ttt").css("borderBottomRightRadius").replace("px", "");
+    $(".borderValR").val(getBorderBottomRightRadius);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// border types
+
+
+$(".solid").click(function(){
+   $(".ttt").css({borderStyle: "solid"})
+})
+$(".dotted").click(function(){
+   $(".ttt").css({borderStyle: "dotted"})
+})
+$(".dashed").click(function(){
+   $(".ttt").css({borderStyle: "dashed"})
+})
+$(".double").click(function(){
+   $(".ttt").css({borderStyle: "double"})
+})
+$(".mixed").click(function(){
+   $(".ttt").css({borderStyle: "dotted dashed solid double;"})
+})
+$(".remove").click(function(){
+   $(".ttt").css({borderStyle: "none"})
+})
+$(".border-settings").draggable();
+
+
+
+</script>
+
+</body>
+
+</html>
+
